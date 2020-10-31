@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  color: #000000;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*min-height: 100vh;*/
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+.header {
+  background: rgb(135, 169, 209);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 10px;
+  width: 99.1%;
+  height: 14vh;
+}
+
+.header h1 {
+  font-size: 35px;
+}
+.header button {
+  cursor: pointer;
+  background-color: #5f95c5;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(68, 109, 143);
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0;
+  outline: 0;
+  letter-spacing: 1px;
+}
+
+.header button:active {
+  transform: scale(0.9);
+}
+
+/*Alert*/
+#alert p{
+    display: block;
+    margin-top: 60px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/*styles from APi*/
+.dogs-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 15px;
+}
+
+.image-dog {
+  width: 250px;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.image-dog:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  filter: saturate(150%);
+}
+/*Loader*/
+.loader {
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+.circle {
+  background-color: #000000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*Resposive design*/
+@media (max-width: 1095px) {
+  .dogs-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 825px) {
+  .dogs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 545px) {
+  .dogs-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image-dog {
+    width: 350px;
+
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="custom.css">
+    <title>Document</title>
+</head>
+
+<body class="grey darken-4">
+
+    <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+            <div class="container">
+                <a href="#" class="brand-logo left reload">
+                    <i class="material-icons left">local_movies</i>BlueDiu Movies
+                </a>
+            </div>
+        </div>
+
+
+        <div class="nav-wrapper">
+            <form id="form">
+                <div class="input-field blue-grey darken-4">
+                    <input autocomplete="off" id="search" type="search" placeholder="write search term" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="row" id="row-p">
+        
+    </div>
+
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Script-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems);
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
