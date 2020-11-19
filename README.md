@@ -2,7 +2,7 @@
 My personal projects with HTML, CSS and JS
 
 🐶 Dogs App
-https://bluediu.github.io/-5-projects-in-JS/Dog-Api/
+https://bluediu.github.io/-5-projects-in-JS/Dog-Api/ <br>
 🎞 Movie App
 https://bluediu.github.io/-5.../Movie_App_Materialize/
 🌤 Weather app
